@@ -291,11 +291,11 @@ if __name__ == "__main__":
     #print(g_model.summary())
     #raise
     
-    # determine wether to load model or not
+    # Determine whether to load the model or not
     #load_id = test_id
-    #if LOAD == True:
-    #    d_model.load_weights(f"./{load_id}/saved_model/d_model.h5")
-    #    g_model.load_weights(f"./{load_id}/saved_model/g_model.h5")
+    if LOAD == True:
+        d_model.load_weights(f"./{load_id}/saved_model/d_model.h5")
+        g_model.load_weights(f"./{load_id}/saved_model/g_model.h5")
 
     # Build and initialize the GAN model
     gan = GAN(d_model, g_model, latent_dim, n_critic = 2)
